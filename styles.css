@@ -18,16 +18,17 @@
     width: 100svw;
     background-color:black;
     grid-template-areas:  
-    "header header"
-    "app sidebar";
-    grid-template-columns: 80% 1fr;
-    grid-template-rows: 1fr 600px;
+    "header "
+    "app "
+    "sidebar";
+
+    grid-template-rows: 1fr 500px 1fr;
 }
 
 .header{
     
     display: flex;
-    background-color:dimgrey;
+    background-color:gray;
     grid-area:header;
     text-align: center;
     justify-content: center;
@@ -37,12 +38,11 @@
 .app{
     display: flex;
     background:none;
-    background-image: url(images/5beee492774ad-b438f6edd45f25b2e6d955dc0c76cb4c.png);
+    background-image:;
     background-size:550px 680px;
     background-position-x: 50%;
     background-position-y: 50%;
     background-repeat: no-repeat;
-    margin-right: 10px;
     grid-area:app;
     justify-content: center;
     align-items: center;
@@ -51,13 +51,13 @@
 
 .sidebar{
    display: flex;
-   flex-direction: column;
    flex: 1;
    justify-content: space-around;
    align-items: center;
+   background-color: gray;
 }
 input{
-    width: 50px
+    width: fit-content;
 }
 
 
@@ -70,3 +70,4 @@ input{
     gap: 1px;
     transform: translateY(-15px);
 }
+
