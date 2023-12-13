@@ -3,7 +3,8 @@ const sizeInput = document.querySelector('#size');
 const clearButton = document.querySelector('#clear');
 const gridButton = document.querySelector('#grid');
 const eraserButton = document.querySelector('#eraser');
-const color  = 'blue'
+const penButton = document.querySelector('#pen');
+let color  = 'black'
 let board = document.querySelector('.board');
 
 function populateBoard(size){
@@ -31,7 +32,13 @@ function populateBoard(size){
     gridButton.addEventListener('click',()=>{
         board.classList.toggle('gap');
     })
-   
+
+    eraserButton.addEventListener('click',()=>{
+        color = 'white'
+    })
+    penButton.addEventListener('click',()=>{
+        color = 'black'
+    })
 }
 
 gridButton.addEventListener('click',()=>{
@@ -39,9 +46,7 @@ gridButton.addEventListener('click',()=>{
 })
 
 populateBoard(16)
-eraserButton.addEventListener('click',()=>{
-    color = 'white'
-})
+
 
 sizeInput.addEventListener('change', ()=>{
 
@@ -63,16 +68,12 @@ sizeInput.addEventListener('change', ()=>{
 })
 
 
-
-
 function colorSquare(){
-    this.style.backgroundColor = color;
-
-    
+    this.style.backgroundColor = color; 
 }
 
-function removeGap(){
-    this.style.gap = "none"
+function Eraser(){
+        color = 'white'
 }
   
 function clear(){

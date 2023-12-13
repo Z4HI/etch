@@ -70,7 +70,7 @@ input{
     z-index: 100;
     gap: 1px;
     padding: 10px;
-    
+    border: double 5px blue;
 }
 
 .gap{
