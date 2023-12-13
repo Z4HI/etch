@@ -29,10 +29,7 @@ function populateBoard(size){
         populateBoard(size);
 
         })
-    gridButton.addEventListener('click',()=>{
-        board.classList.toggle('gap');
-    })
-
+   
     eraserButton.addEventListener('click',()=>{
         color = 'white'
     })
