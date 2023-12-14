@@ -4,6 +4,7 @@ const clearButton = document.querySelector('#clear');
 const gridButton = document.querySelector('#grid');
 const eraserButton = document.querySelector('#eraser');
 const penButton = document.querySelector('#pen');
+let colorButton = document.querySelector('#input-color')
 let color  = 'black'
 let board = document.querySelector('.board');
 
@@ -29,14 +30,18 @@ function populateBoard(size){
         populateBoard(size);
 
         })
-   
     eraserButton.addEventListener('click',()=>{
         color = 'white'
     })
     penButton.addEventListener('click',()=>{
         color = 'black'
     })
+    colorButton.addEventListener('input',()=>{
+        color = colorButton.value;
+    })
+
 }
+
 
 gridButton.addEventListener('click',()=>{
     board.classList.toggle('gap');
@@ -55,9 +60,6 @@ sizeInput.addEventListener('change', ()=>{
     else if(choice=='32'){
         populateBoard(32);
     }
-    else if(choice==='55'){
-        populateBoard(55);
-    }
     else if(choice==='64'){
         populateBoard(64);
     }
@@ -69,11 +71,6 @@ function colorSquare(){
     this.style.backgroundColor = color; 
 }
 
-function Eraser(){
-        color = 'white'
-}
-  
-function clear(){
 
-}
+
         
