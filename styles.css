@@ -36,8 +36,9 @@ button,select{
     "header "
     "app "
     "sidebar";
-    grid-template-rows: 1fr 500px 1fr;
+    grid-template-rows: 1fr 450px 1fr;
     grid-template-columns: 100svw;
+    overflow: hidden;
 }
 
 .header{
@@ -66,6 +67,8 @@ button,select{
    justify-content: space-around;
    align-items: center;
    background-color:rgba(250, 250, 250, 0.133);
+   
+   
 }
 
 input{
@@ -91,4 +94,24 @@ button:hover{
 .gap{
 
     gap: 0;
+}
+
+#input-color{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius:50%;
+    cursor: pointer;
+    
+}
+
+#input-color::-webkit-color-swatch{
+    border-radius: 50%;
+}
+
+.colorP p{
+    color: white;
+    text-align: center;
+    
 }
